@@ -13,15 +13,21 @@ app.use(express.urlencoded({ extended: true }));
 const indexRoutes = require('./routes/index');
 app.use('/', indexRoutes);
 
-// users
-const userRoutes = require('./routes/users');
-app.use('/users', userRoutes);
+// usuarios
+const userRoutes = require('./routes/usuarios');
+app.use('/usuarios', userRoutes);
 
-// music
-const musicRoutes = require('./routes/music');
-app.use('/music', musicRoutes);
+// produtos
+const produtosRoutes = require('./routes/produtos');
+app.use('/produtos', produtosRoutes);// Clientes
+
+// clientes
+const clientesRoutes = require('./routes/clientes');
+app.use('/clientes', clientesRoutes);
 
 // Servidor
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
+
